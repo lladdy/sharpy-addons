@@ -5,6 +5,10 @@ from sharpy.managers.core.grids import Rectangle, BlockerType, BuildArea
 
 
 class ProxySolver(BuildingSolver):
+    """
+    Solves for a proxy building location.
+    Originally extracted from the sharpy-sc2 ProxyZealots dummy bot.
+    """
     def massive_grid(self, pos):
         rect = Rectangle(pos.x, pos.y, 6, 9)
         unit_exit_rect = Rectangle(pos.x - 2, pos.y + 4, 2, 2)
